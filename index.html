@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Student Management System</h1>
+    </header>
+
+    <main class="container">
+        <!-- Student Registration Form -->
+        <section class="form-section">
+            <h2 id="formHeading">Add Student</h2>
+            <form id="studentForm">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="Enter student name">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="text" id="email" placeholder="Enter email address">
+                </div>
+
+                <div class="form-group">
+                    <label for="mobile">Mobile Number</label>
+                    <input type="text" id="mobile" placeholder="Enter mobile number">
+                </div>
+
+                <div class="form-group">
+                    <label for="course">Course</label>
+                    <select id="course">
+                        <option value="">-- Select Course --</option>
+                        <option value="HTML">HTML</option>
+                        <option value="CSS">CSS</option>
+                        <option value="JavaScript">JavaScript</option>
+                        <option value="Python">Python</option>
+                        <option value="Django">Django</option>
+                        <option value="SQL">SQL</option>
+                    </select>
+                </div>
+
+                <div class="form-buttons">
+                    <button type="submit" id="submitBtn">Add Student</button>
+                    <button type="button" id="resetBtn">Reset</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Student Records Table -->
+        <section class="table-section">
+            <div class="table-header">
+                <div>
+                    <h2>Student Records</h2>
+                    <p class="student-count">Total Students: <span id="totalStudents">0</span></p>
+                </div>
+
+                <div class="controls">
+                    <input type="text" id="searchInput" placeholder="Search by name...">
+                    <select id="courseFilter">
+                        <option value="All">All Courses</option>
+                        <option value="JavaScript">JavaScript</option>
+                        <option value="Python">Python</option>
+                        <option value="Java">Java</option>
+                        <option value="SQL">SQL</option>
+                    </select>
+                </div>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Mobile</th>
+                        <th>Course</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="studentTableBody">
+                    <!-- Student rows will be added here dynamically -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
